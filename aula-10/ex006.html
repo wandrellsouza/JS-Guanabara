@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area{
+            font: normal 15pt arial;
+            background-color: rebeccapurple;
+            color: rgb(37, 11, 37);
+            line-height: 300px;
+            text-align: center;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area"><!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" outra forma de fazer um evento-->
+        Interaja...
+    </div>
+
+
+
+    <script>
+        //anotações
+        /*
+        para adicionar eventos,é necessário criar uma variavel
+        e depois atribuir os eventos a mesma variavel através de funções.
+        É possivel mudar cores e fazer alterações de textos através das funções
+        */
+        let area = document.getElementById('area')
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseout',sair)
+        
+        function entrar(){
+            area.innerText = 'Clique'
+            area.style.background = 'red'
+        }
+        function clicar(){
+          area.innerText = 'Clicou'
+          area.style.background = 'yellow'  
+        }
+        function sair(){
+            area.innerText = 'Saiu'
+            area.style.background = 'lightgreen'
+        }
+    </script>
+</body>
+</html>

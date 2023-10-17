@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro ?</h1>
+
+    <label for="">Digite seu país</label> 
+
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="descubra" onclick="descubra()">
+    
+    <div id="res"></div>
+
+
+    <script>
+        function descubra(){
+            let txtp = document.getElementById('txtp')
+            let res = document.getElementById('res')
+            res.innerHTML = (`Olá,você é do ${txtp.value}`)
+
+            if(txtp.value ==' Brasil'){
+                res.innerHTML += (`,logo é um <strong>Brasilero</strong`)
+            }else{
+                res.innerHTML += (`,logo é um Estrangeiro`)
+            }
+        }
+    </script>
+</body>
+</html>

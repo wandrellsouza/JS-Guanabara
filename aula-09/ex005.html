@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #55927e97;
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>INICIANDO ESTUDOS COM DOM</h1>
+    <P>AQUI VAI O RESULTADO</P>
+    <p>APRENDENDO A USAR O <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">CLIQUE EM MIM</div>
+    <script>
+        let corpo = document.body.style.background = 'purple'
+        corpo = document.body.style.background = 'lightgreen'
+        let p1 = document.getElementsByTagName('p')[1]
+        p1.style.background = 'red';
+
+        let msg = document.getElementById('msg')
+        msg.style.color = 'orange'
+        msg.innerText = ('esperando...')
+    </script>
+</body>
+
+</html>
